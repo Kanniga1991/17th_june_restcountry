@@ -7,3 +7,20 @@ var xhr = new XMLHttpRequest();
           console.log(data[i].name);}
         };
         xhr.send();
+
+------------------------------------------
+var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+        xhr.onload = function () {
+          var data = JSON.parse(this.response); for(var i in data){
+          console.log(data[i].region);}
+        };
+        xhr.send();
+  -----------------------------------------------
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+        xhr.onload = function () {
+          var data = JSON.parse(this.response); for(var i in data){
+          console.log(data[i].flag);}
+        };
+        xhr.send();
